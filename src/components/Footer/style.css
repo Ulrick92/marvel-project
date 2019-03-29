@@ -1,0 +1,11 @@
+.footer-site {
+  height: 150px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-site a {
+  color: inherit;
+}

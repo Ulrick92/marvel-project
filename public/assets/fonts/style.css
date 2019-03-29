@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "KomikaSlick-Italic";
+  src: url("./KOMIKSKI.eot"); /* IE9 Compat Modes */
+  src: url("./KOMIKSKI.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./KOMIKSKI.otf") format("opentype"),
+    /* Open Type Font */ url("./KOMIKSKI.svg") format("svg"),
+    /* Legacy iOS */ url("./KOMIKSKI.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./KOMIKSKI.woff") format("woff"),
+    /* Modern Browsers */ url("./KOMIKSKI.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

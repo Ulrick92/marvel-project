@@ -1,0 +1,35 @@
+.heroes-list-card {
+  margin: 5px 10px;
+  position: relative;
+}
+.heroes-list .heroes-list-card .heroes-list-card-img {
+  opacity: 1;
+
+  transition: 0.5s ease;
+}
+.heroes-list-card .heroes-list-card-img img {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.heroes-list .heroes-list-card:hover .heroes-list-card-img {
+  opacity: 0.3;
+}
+.heroes-list .heroes-list-card .heroes-list-card-name {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroes-list .heroes-list-card:hover .heroes-list-card-name {
+  opacity: 1;
+}
+.heroes-list-card .heroes-list-card-name .heroes-list-card-name-text {
+  width: 100%;
+  text-align: center;
+  padding: 0 3px;
+}

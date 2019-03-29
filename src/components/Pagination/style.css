@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination .btn {
+  border: 0;
+  background: #d8232a;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "KomikaSlick-Italic";
+}
+.pagination .btn:focus {
+  outline: none;
+}
+.pagination .btn-prev {
+  margin: 0 15px 0 0;
+}
