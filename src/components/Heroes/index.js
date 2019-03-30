@@ -3,7 +3,7 @@ import "./style.css";
 
 export default class Heroes extends Component {
   render() {
-    const { name, thumbnail, i } = this.props;
+    const { name, thumbnail } = this.props;
     return (
       <Fragment>
         <div className="heroes-list-card-img">

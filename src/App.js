@@ -11,6 +11,12 @@ class App extends Component {
         <Fragment>
           <Header />
           <Route exact path="/" component={Home} />
+          <Route
+            path="/:offset/:limit"
+            render={props => (
+              <Home key={props.match.params.offset} {...props} /> // key permet de rafraichir la page, pour relancer l'axios
+            )}
+          />
           <Footer />
         </Fragment>
       </Router>

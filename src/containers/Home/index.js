@@ -31,38 +31,22 @@ export default class Home extends Component {
     ));
     return characters;
   };
-  updateHeroesList = heroes => {
-    this.setState({
-      heroes: heroes
-    });
-  };
-  updateSearchParams = (newParams, callbackFunction) => {
-    this.setState(
-      {
-        params: {
-          ...this.state.params,
-          ...newParams
-        }
-      },
-      callbackFunction
-    );
-  };
   render() {
     const { mounted } = this.state;
-
+    // console.log("Props ", this.props);
+    // console.log("Props ", this.props.match.params.offset);
     return mounted ? (
       <Fragment>
         <div className="trombinoscope">
+          <Pagination searchParams={this.state.params} />
           <ul className="heroes-list">{this.renderHeroes()}</ul>
-          <Pagination
-            updateHeroesList={this.updateHeroesList}
-            searchParams={this.state.params}
-            updateSearchParams={this.updateSearchParams}
-          />
+          <Pagination searchParams={this.state.params} />
         </div>
       </Fragment>
     ) : (
-      <Fragment>Loading...</Fragment>
+      <Fragment>
+        <div className="loading">Loading...</div>
+      </Fragment>
     );
   }
   componentDidMount() {
@@ -71,15 +55,18 @@ export default class Home extends Component {
         "https://gateway.marvel.com:443/v1/public/characters?apikey=f7c8105afcefcef9bb285687ff296fbf",
         {
           params: {
-            limit: ITEMS_PER_PAGE
+            limit: ITEMS_PER_PAGE,
+            offset: this.props.match.params.offset
           }
         }
       )
       .then(response => {
-        console.log(response.data);
-        console.log("Result =>", response.data.data.results);
+        // console.log("Result =>", response.data.data.results);
         this.setState({
           heroes: response.data.data.results,
+          params: {
+            offset: this.props.match.params.offset
+          },
           mounted: true
         });
       })
