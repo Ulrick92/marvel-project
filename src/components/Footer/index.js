@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <Fragment>
         <div className="footer-site">
-          <a href="http://marvel.com" target="_blank">
+          <a href="http://marvel.com" target="_blank" rel="noopener noreferrer">
             Data provided by Marvel. &copy; {new Date().getFullYear()} MARVEL
           </a>
         </div>

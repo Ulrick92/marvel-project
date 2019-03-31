@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 import Image from "../../images/marvel-logo.png";
 import "./style.css";
 
@@ -8,7 +9,9 @@ export default class Header extends Component {
       <Fragment>
         <header className="header-site">
           <div className="logo">
-            <img src={Image} alt="Marve Logo" />
+            <Link to="/">
+              <img src={Image} alt="Marve Logo" />
+            </Link>
           </div>
         </header>
       </Fragment>
